@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Download for free</title>
+    <meta charset="utf-8">
+
+    <!-- eel.js , this is necessary  -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="modal modal-signin d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="container" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-12 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <h2 class="fw-bold mb-0">Download for free</h2>
+
+                </div>
+
+                <div class="modal-body p-12 pt-0">
+
+                    <form id="form1" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">1</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form1')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form1')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form2" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">2</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form2')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form2')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form3" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">3</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form3')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form3')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form4" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">4</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form4')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form4')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form5" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">5</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form5')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form5')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form6" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">6</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form6')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form6')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form7" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">7</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form7')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form7')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form8" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">8</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form8')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form8')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+                    <form id="form9" class="pb-3">
+                        <fieldset id='disBtn'>
+                            <div class="input-group">
+                                <span class="input-group-text" id="dw_id">9</span>
+                                <span class="input-group-text">影片網址</span>
+                                <input type="text" aria-label="First name" class="form-control" id="webURL"
+                                    onchange="getTitle('form9')">
+                                <span class="input-group-text ">檔案名稱</span>
+                                <input type="text" aria-label="Last name" class="form-control" id="fileName">
+
+                                <div>
+                                    <select class="form-select" id="type" required="">
+                                        <option value="">選擇格式</option>
+                                        <option value="mp3">mp3</option>
+                                        <option value="mp4">mp4</option>
+                                    </select>
+                                </div>
+                                <button id="submit" class='btn btn -lg rounded-4 btn-primary ' type="submit"
+                                    onclick="submit_click('form9')">下載</button>
+                            </div>
+                        </fieldset>
+                        <div class="progress">
+                            <div id='progress' class="progress-bar progress-bar-striped progress-bar-animated"
+                                role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">0%</div>
+                        </div>
+                    </form>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            style="height: 100px" disabled></textarea>
+                        <label for="floatingTextarea">訊息:</label>
+                    </div>
+                    <small class="text-muted"> Design from Web_Huang.</small>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
